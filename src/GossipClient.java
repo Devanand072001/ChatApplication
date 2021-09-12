@@ -2,14 +2,8 @@ import java.io.*;
 
 import java.net.*;
 
-public class GossipClient
-
-{
-
-  public static void main(String[] args) throws Exception
-
-  {
-
+public class GossipClient {
+  public static void main(String[] args) throws Exception {
     Socket sock = new Socket("127.0.0.1", 3000);
 
     // reading from keyboard (keyRead object)
@@ -32,9 +26,7 @@ public class GossipClient
 
     String receiveMessage, sendMessage;
 
-    while (true)
-
-    {
+    while (true) {
 
       sendMessage = keyRead.readLine(); // keyboard reading
 
@@ -42,10 +34,7 @@ public class GossipClient
 
       pwrite.flush(); // flush the data
 
-      if ((receiveMessage = receiveRead.readLine()) != null) // receive from server
-
-      {
-
+      if ((receiveMessage = receiveRead.readLine()) != null) {// receive from server
         System.out.println(receiveMessage); // displaying at DOS prompt
 
       }

@@ -2,12 +2,9 @@ import java.io.*;
 
 import java.net.*;
 
-public class GossipServer
+public class GossipServer {
 
-{
-
-  public static void main(String[] args) throws Exception
-  {
+  public static void main(String[] args) throws Exception {
     ServerSocket sersock = new ServerSocket(3000);
 
     System.out.println("Server  ready for chatting");
@@ -32,13 +29,9 @@ public class GossipServer
 
     String receiveMessage, sendMessage;
 
-    while (true)
+    while (true) {
 
-    {
-
-      if ((receiveMessage = receiveRead.readLine()) != null)
-
-      {
+      if ((receiveMessage = receiveRead.readLine()) != null) {
 
         System.out.println(receiveMessage);
 
